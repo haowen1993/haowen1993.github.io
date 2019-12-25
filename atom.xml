@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://haowen1993.github.io</id>
-    <title>haowen的动感地带</title>
-    <updated>2019-12-25T15:50:07.673Z</updated>
+    <title>haowen</title>
+    <updated>2019-12-25T16:27:53.931Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://haowen1993.github.io"/>
     <link rel="self" href="https://haowen1993.github.io/atom.xml"/>
     <subtitle>在我地盘这，你就得听我的</subtitle>
     <logo>https://haowen1993.github.io/images/avatar.png</logo>
     <icon>https://haowen1993.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, haowen的动感地带</rights>
+    <rights>All rights reserved 2019, haowen</rights>
     <entry>
         <title type="html"><![CDATA[hello world]]></title>
         <id>https://haowen1993.github.io/post/hello-world</id>
