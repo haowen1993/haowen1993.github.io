@@ -1,136 +1,150 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>hello world | haowen</title>
-<meta name="description" content="在我地盘这，你就得听我的" />
-<link rel="shortcut icon" href="https://haowen1993.github.io/favicon.ico?v=1577290873985">
-<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+    
+<meta charset="utf-8" >
+
+<title>hello， world | haowen</title>
+<meta name="description" content="在我地盘这，你就得听我的">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://haowen1993.github.io/favicon.ico?v=1577344594309">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-
 <link rel="stylesheet" href="https://haowen1993.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="hello world | haowen - Atom Feed" href="https://haowen1993.github.io/atom.xml">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
   </head>
   <body>
-    <div class="site-nav no-cover">
-      <div class="head">
-  <div class="inner">
-    <a class="site-name" href="https://haowen1993.github.io">
-        <span>haowen</span>
-    </a>
-    <label class="burger" for="burger"></label>
-    <input id="burger" type="checkbox">
-    <button class="burger">
-      <div>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-    <nav class="info_nav">
-      
-        
-          <a href="/">首页</a>
-        
-      
-        
-          <a href="/archives">归档</a>
-        
-      
-        
-          <a href="/tags">标签</a>
-        
-      
-        
-          <a href="/post/about">关于</a>
-        
-      
-    </nav>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://haowen1993.github.io">
+        <img class="avatar" src="https://haowen1993.github.io/images/avatar.png?v=1577344594309" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://haowen1993.github.io">
+        <h1 class="site-title">haowen</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
-    </div>
-    <article role="main" class="hentry ">
-      
-      <h1 class="entry-title" itemprop="headline">hello world</h1>
-      <div class="entry-meta">
-        <time class="updated" datetime="2019-12-25 23:48:59">2019-12-25</time>
-        <span class="author vcard">
-          1 min read
-        </span>
-      </div>
-      <div class="post-content yue">
-        <p>太费劲了</p>
-<!-- more -->
 
-      </div>
-      <div class="entry-block">
-        <div class="entry-tags">
-          
-        </div>
-      </div>
-    </article>
-    
-    
-      <section class="post-section prev-post">
-        <div class="inner">
-          <h3>后一篇</h3>
-          <a href="https://haowen1993.github.io/post/hello-gridea">
-            <strong>Hello Gridea</strong>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="https://haowen1993.github.io" class="menu purple-link">
+            主页
           </a>
-        </div>
-      </section>
-    
-
-    
-
-    <footer class="footer">
-  <div class="main">
-    <a href="https://haowen1993.github.io">
-      <img class="avatar" src="https://haowen1993.github.io/images/avatar.png?v=1577290873985" alt="haowen">
-    </a>
-    <div class="footer__social">
-      
         
       
         
-      
-        
-          <a href="https://www.weibo.com/5071593609" target="_blank"><i class="remixicon-weibo-line"></i></a>
-        
-      
+          <a href="https://haowen1993.github.io/archives" class="menu purple-link">
+            归档
+          </a>
         
       
         
-      
+          <a href="https://haowen1993.github.io/tags" class="menu purple-link">
+            标签
+          </a>
         
       
         
-      
-        
-          <a href="https://www.instagram.com/haowen1993.ins/" target="_blank"><i class="remixicon-instagram-line"></i></a>
-        
-      
-        
-      
+          <a href="https://haowen1993.github.io/post/about/" class="menu purple-link">
+            关于
+          </a>
         
       
     </div>
-    <p class="footer__sosumi">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-    </p>
-    <a class="footer-rss" href="https://haowen1993.github.io/atom.xml">RSS</a>
   </div>
-</footer>
+</transition>
 
-<script src="https://haowen1993.github.io/media/prism.js"></script>
-<script>
-  Prism.highlightAll()
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://haowen1993.github.io/post-images/hello-world.jpeg')">
+            </div>
+          
+          <h2 class="post-title">hello， world</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2018-05-01</span>
+            
+          </div>
+          <div class="post-content">
+            <p>关闭朋友圈的想法由来已久，就像当年关闭QQ空间一样。</p>
+<!-- more --> 
+<p>工作了一年半之后，微信已经被工作塞满，我不是那种将工作视为生命的人，也没有太大的事业心，所以，我一直想要逃离，想要拥有自己的空间和时间，安安静静地做点自己喜欢的事情。<br>
+2018年春节期间，我开始尝试着将朋友圈动态设置为了仅展示3天的动态；仅仅不到半年的时间，2018年5月3日，我终于关闭了自己的朋友圈，并开始着手考虑搭建个人博客。就像博客首页的那句话“胆小认生，不易交往”，搭建这个博客，只为讨好我自己。<br>
+在博客搭建成功的那一刻，我的内心是非常激动的，对这一片陌生而又荒芜的土地满怀希望，甚至有那么一瞬间，我觉得自己就是个程序员，搞个个人小网站也不复杂嘛，以至于迫不及待的很装逼的用&quot;hello, world&quot;作为了这片文章的标题。就像突然打开了一扇大门，整个世界都在你的眼前了，不禁感叹第一次用这句话做程序演示的人真的太伟大了，没有比&quot;hello, world&quot;更合适的了。<br>
+我一直很痴迷于程序员的工作，喜欢他们那种游离在科技和人文边界的那种状态，那种对产品极致的追求，那种为了产品的完美，在即使只有少数人才能注意到的、可有可无的细节也要不断雕琢打磨的工匠精神。Chrome浏览器就是一个很好的例子，在断网时出现的那个小恐龙跳跃游戏——“如果没有互联网，你就回到了恐龙时代”。程序员真是一群伟大又可爱的人。<br>
+<img src="https://haowen1993.github.io/post-images/1577344471087.gif" alt="Chrome-小恐龙"><br>
+匆匆茫茫的写了这么多，也没什么主题。但是无所谓啦，祝贺自己成为了这片土地的主人，希望自己能够坚持下去，用心经营。</p>
+
+          </div>
+        </div>
+
+        
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">在我地盘这，你就得听我的</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+        <a href="https://www.weibo.com/5071593609" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://haowen1993.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
+
+
+
 
   </body>
 </html>
